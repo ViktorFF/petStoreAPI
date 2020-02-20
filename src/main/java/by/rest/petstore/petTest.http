@@ -1,0 +1,110 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/pet/0
+Content-Type: application/json
+
+{
+  "token": "-910160298"
+}
+
+###
+
+POST http://localhost:8080/pet/0
+Content-Type: application/json
+
+{
+  "token": "-910160298",
+  "petName": "test",
+  "petStatus": "sold"
+}
+
+###
+
+DELETE http://localhost:8080/pet/0
+Content-Type: application/json
+
+{
+  "token": "-910160298"
+}
+
+###
+
+POST http://localhost:8080/pet/0/uploadImage
+Content-Type: application/json
+
+{
+  "token": "901209314",
+  "petPhotoUrl": "http://test.com/test/test.img"
+}
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "token": "901209314",
+  "pet": {
+    "id": 0,
+    "category": {
+      "id": 0,
+      "name": "string"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+    ],
+    "status": "available"
+  }
+}
+
+###
+
+PUT http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "token": "-910160298",
+  "pet": {
+    "id": 0,
+    "category": {
+      "id": 0,
+      "name": "dog"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+    ],
+    "status": "available"
+  }
+}
+
+###
+
+GET http://localhost:8080/pet/findByStatus
+Content-Type: application/json
+
+{
+  "token": "382769744",
+  "petStatus": "available"
+}
+
+###

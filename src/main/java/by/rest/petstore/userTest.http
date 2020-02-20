@@ -1,0 +1,125 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/user/string
+Content-Type: application/json
+
+{
+  "token": "-628429903"
+}
+
+###
+
+PUT http://localhost:8080/user/string
+Content-Type: application/json
+
+{
+  "token": "-1394908245",
+  "user": {
+    "id": 0,
+    "username": "string",
+    "firstName": "test",
+    "lastName": "superTest",
+    "email": "test",
+    "password": "test",
+    "phone": "test",
+    "userStatus": 0
+  }
+}
+
+###
+
+DELETE http://localhost:8080/user/string
+Content-Type: application/json
+
+{
+  "token": "-628429903"
+}
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "user": {
+    "id": 0,
+    "username": "string",
+    "firstName": "string",
+    "lastName": "string",
+    "email": "string",
+    "password": "string",
+    "phone": "string",
+    "userStatus": 0
+  }
+}
+
+###
+
+POST http://localhost:8080/user/logout
+Content-Type: application/json
+
+{
+  "token": "-628429903"
+}
+
+###
+
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "id": 0,
+  "username": "string",
+  "firstName": "string",
+  "lastName": "string",
+  "email": "string",
+  "password": "string",
+  "phone": "string",
+  "userStatus": 0
+}
+
+###
+
+POST http://localhost:8080/user/createWithList
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "username": "string1",
+    "firstName": "string1",
+    "lastName": "string1",
+    "email": "string1",
+    "password": "string1",
+    "phone": "string1",
+    "userStatus": 0
+  },
+  {
+    "id": 2,
+    "username": "string2",
+    "firstName": "string2",
+    "lastName": "string2",
+    "email": "string2",
+    "password": "string2",
+    "phone": "string2",
+    "userStatus": 0
+  },
+  {
+    "id": 3,
+    "username": "string3",
+    "firstName": "string3",
+    "lastName": "string3",
+    "email": "string3",
+    "password": "string3",
+    "phone": "string3",
+    "userStatus": 0
+  }
+]
+
+###
